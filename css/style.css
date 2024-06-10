@@ -33,6 +33,10 @@ p {
   margin: 0;
 }
 
+.header {
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+
 .header-nav {
   display: flex;
   align-items: center;
@@ -47,7 +51,7 @@ p {
   letter-spacing: 0.02em;
   padding: 24px 0;
   margin: 0;
-  
+  display: block;
 }
 
 .header-nav-link:hover,
@@ -75,8 +79,24 @@ p {
 .header-nav-list{
  display: flex;
   gap: 40px;
-  padding: 24px 0;
   margin: 0;
+}
+
+.header-nav-link-menu {
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-nav-link-menu::after {
+  width: 100%;
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
 }
 
 address {
@@ -89,6 +109,10 @@ address {
   padding: 24px 0 24px;
   margin: 0;
   
+}
+
+.header-address-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .header-address-item:first-child {
@@ -133,7 +157,10 @@ header {
 .hero {
   background-color: #2E2F42;
   padding: 188px 0;
-  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office\ 1.jpg);
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)), 
+  url(../images/people-office\ 1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 1440px;
